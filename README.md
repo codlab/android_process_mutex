@@ -12,6 +12,34 @@ which provide everything you need to add support for such a feature.
 
 pthread + mutex are used inside the library
 
+
+How to use ?
+============
+
+At first, create an instance of the object, prefereably in the Application instance
+Then simply :
+```
+Mutex my_mutex = new Mutex("SomeKeyToMapTheMutex");
+
+my_mutex.lock();
+//enter the critical section
+
+... stuff in critical section ...
+
+//quit the critical section
+my_mutex.unlock();
+```
+
+Example ? those lines in Threads, AsyncTask, AbstractThreadedSyncAdapter, ...
+
+Compatibility & limitation
+==========================
+
+Compatible with every Android version, every architecture.
+
+As state in the TODOs, the library lacks of some feature (!!). Any issue, comments? Feel free to comment, share, pull request
+
+
 TODOs
 =====
 
