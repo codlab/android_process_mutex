@@ -1,0 +1,10 @@
+{
+	global:
+		shmctl;
+		shmget;
+		shmat;
+		shmdt;
+		*;
+
+	#local: ;#*;         # hide everything else
+};
