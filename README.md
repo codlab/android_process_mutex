@@ -16,6 +16,10 @@ pthread + mutex are used inside the library
 How to use ?
 ============
 
+```
+compile 'eu.codlab:mutex_shared:0.9'
+```
+
 At first, create an instance of the object, prefereably in the Application instance
 Then simply :
 ```
