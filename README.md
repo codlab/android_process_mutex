@@ -17,7 +17,7 @@ How to use ?
 ============
 
 ```
-compile 'eu.codlab:mutex_shared:0.9'
+compile 'eu.codlab:mutex_shared:0.9.2'
 ```
 
 At first, create an instance of the object, prefereably in the Application instance
