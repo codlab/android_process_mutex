@@ -17,13 +17,21 @@ How to use ?
 ============
 
 ```
-compile 'eu.codlab:mutex_shared:0.9.2'
+compile 'eu.codlab:mutex_shared:0.9.3'
 ```
 
 At first, create an instance of the object, prefereably in the Application instance
+Globally initialize :
+```
+Mutex.initAll();
+```
+
 Then simply :
 ```
-Mutex my_mutex = new Mutex("SomeKeyToMapTheMutex");
+Mutex my_mutex = new Mutex();
+my_mutex.init();
+
+...
 
 my_mutex.lock();
 //enter the critical section
@@ -32,6 +40,10 @@ my_mutex.lock();
 
 //quit the critical section
 my_mutex.unlock();
+
+...
+
+my_mutex.release();
 ```
 
 Example ? those lines in Threads, AsyncTask, AbstractThreadedSyncAdapter, ...
