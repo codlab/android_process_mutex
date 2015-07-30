@@ -39,6 +39,7 @@ JNIEXPORT void JNICALL Java_eu_codlab_sharedmutex_Mutex_configure(JNIEnv* env, j
 
     des_mutex = shmget(IPC_PRIVATE, sizeof(*semaphor), mode);
     semaphor = shmat(des_mutex, NULL, 0);
+    pthread_mutex_init(semaphor, NULL);
 
     usleep(200);
 
